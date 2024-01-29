@@ -74,16 +74,303 @@
                 <h2 class="major">Projects</h2>
                 <ol>
                     <li>
-                        <b>Trending FIFA players</b></br>
-                        This is a trending FIFA player's data analysis project where we have done web scraping using selenium from this website. We scrapped 3000 trending FIFA players' data and stored them in an Excel sheet. Data analysis was done in Tableau. There are two dashboards and proper explanation is given in github. </br>
-                        <a href="" style="font-size: 14px;"><i>Click here for detail..</i></a></br>
+                        <b><a href="#TFP">Trending FIFA players</a></b></br>
+                        This is a trending FIFA player's data analysis project where we have done web scraping using
+                        selenium from this website. </br>
+                        <a href="#TFP" style="font-size: 14px;"><i>Click here for detail..</i></a></br>
                         </br>
-                        <b style="font-size: 18px;">Github link: </b><a href="https://github.com/kavinh07/trending-FIFA-players.git"><i>trending_FIFA_players</i></a></br>
-                        <b style="font-size: 18px;">Tableau dashboard link: </b><a href="https://public.tableau.com/views/TrendingFIFAplayersanalysis/Dashboard1?:language=en-GB&:display_count=n&:origin=viz_share_link"><i>Data visualization in Tableau</i></a></br>
-                        <b style="font-size: 18px;">Kaggle link: </b><a href="https://www.kaggle.com/datasets/mdkabinhasan/trending-fifa-players-dataset"><i>Trending FIFA Players Dataset</i></a></br>
+                        <b style="font-size: 14px;">Github link: </b><a
+                            href="https://github.com/kavinh07/trending-FIFA-players.git"><i>trending_FIFA_players</i></a></br>
+                        <b style="font-size: 14px;">Tableau dashboard link: </b><a
+                            href="https://public.tableau.com/views/TrendingFIFAplayersanalysis/Dashboard1?:language=en-GB&:display_count=n&:origin=viz_share_link"><i>Data
+                                visualization in Tableau</i></a></br>
+                        <b style="font-size: 14px;">Kaggle link: </b><a
+                            href="https://www.kaggle.com/datasets/mdkabinhasan/trending-fifa-players-dataset"><i>Trending
+                                FIFA Players Dataset</i></a></br>
+                    </li>
+                    <br>
+                    <li>
+                        <b><a href="#SBR">Sports Ball Recognizer</a></b></br>
+                        An image classification model from data collection, cleaning, model training, deployment and API
+                        integration. </br>
+                        <a href="#SBR" style="font-size: 14px;"><i>Click here for detail..</i></a></br>
+                        </br>
+                        <b style="font-size: 14px;">Github link: </b><a
+                            href="https://github.com/kavinh07/Sports-Ball-Recognizer.git"><i>Sports-Ball-Recognizer</i></a></br>
+                        <b style="font-size: 14px;">GitHub Pages link: </b><a
+                            href="https://kavinh07.github.io/Sports-Ball-Recognizer/"><i>Sports Ball
+                                Recognizer</i></a></br>
+                        <b style="font-size: 14px;">Kaggle link: </b><a
+                            href="https://www.kaggle.com/datasets/mdkabinhasan/sports-ball-dataset"><i>Sports Ball
+                                Dataset</i></a></br>
+                    </li>
+                    <br>
+                    <li>
+                        <b><a href="#MQC">Multilabel Quote Classifier</a></b></br>
+                        A text classification model from data collection, model training, and deployment. </br>
+                        <a href="#MQC" style="font-size: 14px;"><i>Click here for detail..</i></a></br>
+                        </br>
+                        <b style="font-size: 14px;">Github link: </b><a
+                            href="https://github.com/kavinh07/Multilabel-Quote-Classifier.git"><i>Multilabel-Quote-Classifier</i></a></br>
+                        <b style="font-size: 14px;">Web page link: </b><a
+                            href="https://multilabelquoteclassifier.onrender.com/"><i>Multilabel Quote
+                                Classifier</i></a></br>
+                        <b style="font-size: 14px;">Kaggle link: </b><a href=""><i>Multilabel Quote
+                                Classifier</i></a></br>
                     </li>
 
                 </ol>
+            </article>
+            <article id="MQC">
+                <h2 class="major">Multilabel Quote Classifier</h2>
+                <p>
+                    A text classification model from data collection, model training, and deployment.
+                    The model can classify 675 different types of quote tags
+                </p>
+                <br>
+                <h3>Data Collection</h3>
+                Data was collected from BrainyQuote Website Listing: <a
+                    href="https://www.brainyquote.com/topics">www.brainyquote.com</a> <br>
+                The data collection process is divided into 3 steps:
+                <ol>
+                    <li>The quotes URLs were scraped and stored along with the quote title</li>
+                    <li>Using the URLs, the quotes, the authors, the category and the description URLs are scraped and
+                        stored</li>
+                    <li>The final part was tag scraping and it was the difficult one. I split the total data into
+                        mini-batches and scrap tags and stored</li>
+                </ol>
+                In total, I scraped 1,01,243 quotes with their author's name, categories and relevant tags.
+                <br>
+                <h3>Model Training</h3>
+                <p>
+                    Finetuned distilroberta-base and bert-base-uncased models from HuggingFace Transformers using Fastai
+                    and Blurr. The model training notebook can be viewed <a
+                        href="https://colab.research.google.com/drive/1GcgSEmS1FCtnuL6XmPLurVufQJcYaSsa?usp=sharing">here</a>
+                </p>
+                <br>
+                <h3>Result Comparison</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Models</th>
+                            <th>Test Accuracy</th>
+                            <th>F1 Score (Micro)</th>
+                            <th>F1 Score (Macro)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Distil Roberta Base</td>
+                            <td>-</td>
+                            <td>84.89%</td>
+                            <td>52.42%</td>
+                        </tr>
+                        <tr>
+                            <td>Bert Base Uncased</td>
+                            <td>-</td>
+                            <td>88.60%</td>
+                            <td>67.15%</td>
+                        </tr>
+                    </tbody>
+                </table>
+                'Bert Base Uncased' found as a best model after the comparison.
+                <br>
+                <h3>Model Compression and ONNX Inference</h3>
+                <p>
+                    The trained 'Bert Base Uncased' model has a memory of 422+MB. I compressed this model using ONNX
+                    quantization and brought it under 106MB.
+                </p>
+                <br>
+                <h3>Model Deployment</h3>
+                <b>Hugging Face:</b> The compressed model is deployed to the HuggingFace Spaces Gradio App. The
+                implementation can be found in <a
+                    href="https://huggingface.co/spaces/kavinh07/quote-classifier">here</a>. <br>
+                <b>Webpage:</b> Deployed a Flask App built to take descriptions and show the tags as output. The website
+                is live in <a href="https://multilabelquoteclassifier.onrender.com">here</a>. <br>
+                <br>
+                <b style="font-size: 14px;">Github link: </b><a
+                    href="https://github.com/kavinh07/Multilabel-Quote-Classifier.git"><i>Multilabel-Quote-Classifier</i></a></br>
+                <b style="font-size: 14px;">Web page link: </b><a
+                    href="https://multilabelquoteclassifier.onrender.com/"><i>Multilabel Quote
+                        Classifier</i></a></br>
+                <b style="font-size: 14px;">Kaggle link: </b><a href=""><i>Multilabel Quote
+                        Classifier</i></a></br>
+            </article>
+            <article id='SBR'>
+                <h2 class="major">Sports Ball Recognizer</h2>
+                <p>
+                    An image classification model from data collection, cleaning, model training, deployment and API
+                    integration.
+                    The model can classify 10 different types of balls
+                    The types are the following:
+                <ul>
+                    <li>Football</li>
+                    <li>Basketball</li>
+                    <li>Volleyball</li>
+                    <li>Rugby</li>
+                    <li>Golf</li>
+                    <li>Cricket</li>
+                    <li>Tennis</li>
+                    <li>Bowling</li>
+                    <li>Billiards</li>
+                    <li>Baseball</li>
+                </ul>
+                </p>
+                <h3>Dataset Preparation</h3>
+                <p>
+                    <b>Data Collection:</b> Downloaded from DuckDuckGo using term name and adding extra string ' only
+                    balls
+                    images'. A total of 2872 images were collected initially. After unlinking the damaged data, the
+                    total number of images was 2776.</br>
+                    <b>DataLoader:</b> Used FastAI DataBlock API to set up the DataLoader.</br>
+                    <b>Data Augmentation:</b> FastAI provides default data augmentation which operates in GPU.</br>
+                    For the data preparation code click <a
+                        href="https://colab.research.google.com/drive/1OPwZfhkUtTQgKBwDeA8-YcY08l-vU_x9?usp=sharing">here</a>
+                </p>
+                <br>
+                <h3>Training and Data Cleaning</h3>
+                <b>Training:</b> Fine-tuned several pre-trained models for 5 epochs and got resnet34 as the best model.
+                Then resnet34 was finetuned for 4 more times (Total 5 times) and achieved ~99% accuracy. <br>
+                <b>Results Comparison:</b><br>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Models</th>
+                            <th>Train Loss</th>
+                            <th>Valid Loss</th>
+                            <th>Error Rate</th>
+                            <th>Train Accuracy</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Resnet34</td>
+                            <td>0.052</td>
+                            <td>0.043</td>
+                            <td>0.011</td>
+                            <td>98.87%</td>
+                        </tr>
+                        <tr>
+                            <td>GoogleNet</td>
+                            <td>0.694</td>
+                            <td>0.811</td>
+                            <td>0.213</td>
+                            <td>78.65%</td>
+                        </tr>
+                        <tr>
+                            <td>VGG16</td>
+                            <td>0.472</td>
+                            <td>0.557</td>
+                            <td>0.176</td>
+                            <td>82.4%</td>
+                        </tr>
+                        <tr>
+                            <td>MobileNet V3 Small</td>
+                            <td>0.920</td>
+                            <td>0.882</td>
+                            <td>0.250</td>
+                            <td>74.91%</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <b>Data Cleaning:</b> This part took the longest time. Since I collected data from the browser, there
+                were many noises. Also, some images contained irrelevant data. I cleaned and updated data using FastAI
+                ImageClassifierCleaner. I cleaned the data each time after training or fine-tuning, except for the last
+                time which was the final iteration of the model. <br>
+                You can check the data training and cleaning process <a
+                    href="https://drive.google.com/file/d/1F9vbLydTH0h-tOJwaLiBJ_vmrjL-cfUp/view?usp=sharing">here</a>
+                <br>
+                <br>
+                <h3>Deployment</h3>
+                <p>
+                    <b>Hugging Face:</b> I deployed the model to the HuggingFace Spaces Gradio App. The implementation
+                    can be found <a href="https://huggingface.co/spaces/kavinh07/ball-classifier">here</a> <br>
+                    <b>GitHub pages:</b> The deployed model API is integrated <a
+                        href="https://kavinh07.github.io/Sports-Ball-Recognizer/">here</a>
+                </p>
+                <b style="font-size: 14px;">Github link: </b><a
+                    href="https://github.com/kavinh07/Sports-Ball-Recognizer.git"><i>Sports-Ball-Recognizer</i></a></br>
+                <b style="font-size: 14px;">GitHub Pages link: </b><a
+                    href="https://kavinh07.github.io/Sports-Ball-Recognizer/"><i>Sports Ball
+                        Recognizer</i></a></br>
+                <b style="font-size: 14px;">Kaggle link: </b><a
+                    href="https://www.kaggle.com/datasets/mdkabinhasan/sports-ball-dataset"><i>Sports Ball
+                        Dataset</i></a></br>
+            </article>
+            <article id="TFP">
+                <h2 class="major">Trending FIFA Players</h2>
+                <p>
+                    This is a trending FIFA player's data analysis project where we have done web scraping using
+                    selenium from this <a href="https://sofifa.com/">website</a>. We scrapped 3000 trending FIFA
+                    players' data and stored them in an Excel
+                    sheet. There are 12 columns as given:
+                <ul>
+                    <li>Player_name</li>
+                    <li>Images</li>
+                    <li>Age</li>
+                    <li>National_team</li>
+                    <li>Positions</li>
+                    <li>Overall</li>
+                    <li>Potential_overall</li>
+                    <li>Current_club</li>
+                    <li>Current_contract</li>
+                    <li>Value</li>
+                    <li>Wage</li>
+                    <li>Total_stats</li>
+                </ul>
+                </p>
+                <br>
+                <h3>Problem statements</h3>
+                <p>
+                    Then we have done some data processing using Python libraries like pandas and re. By organising the
+                    data in Tableau, we tried to understand:
+                <ol>
+                    <li>Which country has how many players on the trending FIFA players website and what is the total
+                        value?</li>
+                    <li>Who are the top players in the trending sheet?</li>
+                    <li>Players of which age have good stats?</li>
+                    <li>Which players are ruling in the trending player's list?</li>
+                    <li>Top clubs having the most valued players in the trending list?</li>
+                </ol>
+                </p>
+                <br>
+                <h3>Findings and Observations from the Dashboard</h3>
+                <p>
+                    <b>Player Performance Analysis in clubs:</b></br>
+                    <img src="images\Player Performance Analysis in clubs.png" style="height: 100%; width: 100%;">
+                <ul>
+                    <li>From the bar chart, we can see the top 20 players according to their overalls. They are in
+                        different colours in respect of their current clubs.</li>
+                    <li>From the pie chart, we find out that Real Madrid has the most valuable players. And also the
+                        other clubs and their values that are on the top list.</li>
+                    <li>From the density graph, we can see that approximately players between 20-33 years old have
+                        better stats than others.</li>
+                    <li>The bubble graph shows the top 20 young players (18-25 years old) and their value comparison.
+                        They are also coloured according to their current clubs.</li>
+                </ul>
+                </p>
+                <p>
+                    <b>Player Performance Analysis in national teams:</b></br>
+                    <img src="images\Player Performance Analysis in national teams.png"
+                        style="height: 100%; width: 100%;">
+                <ul>
+                    <li>From the first bar chart, we can see that Spain has the most value and England has the most
+                        number of players. The bar chart shows the national team rankings by the total value in the
+                        trending list. It also shows the total number of players on the list.</li>
+                    <li>From the graphical graph, we can find out each country's values and total number of players by
+                        their spatial position.</li>
+                    <li>From the last bar chart, we can see the same top player rankings but coloured concerning
+                        national teams.</li>
+                </ul>
+                </p>
+                <b style="font-size: 18px;">Github link: </b><a
+                    href="https://github.com/kavinh07/trending-FIFA-players.git"><i>trending_FIFA_players</i></a></br>
+                <b style="font-size: 18px;">Tableau dashboard link: </b><a
+                    href="https://public.tableau.com/views/TrendingFIFAplayersanalysis/Dashboard1?:language=en-GB&:display_count=n&:origin=viz_share_link"><i>Data
+                        visualization in Tableau</i></a></br>
+                <b style="font-size: 18px;">Kaggle link: </b><a
+                    href="https://www.kaggle.com/datasets/mdkabinhasan/trending-fifa-players-dataset"><i>Trending FIFA
+                        Players Dataset</i></a></br>
             </article>
 
             <!-- Researches -->
@@ -103,7 +390,7 @@
                             Overall, the project emphasizes personalized learning experiences through AI-driven content
                             adaptation in EdTech.
                         <p>Too see the paper click <a
-                                href="https://drive.google.com/file/d/1WnOaEbk6X-_05e0W2iEbYq6iPZRPxJOz/view?usp=sharing"><b>here</b></a>.
+                                href="https://drive.google.com/file/d/1n2Wkx8gznd0M7TUrQINMaglvpH1nmd5F/view?usp=sharing"><b>here</b></a>.
                         </p>
                         </p>
                     </li>
@@ -165,15 +452,19 @@
                 <h2 class="major">Certifications</h2>
                 <ol>
                     <li>
-                        <p><b style="font-size: 22px;">Introduction to Cybersecurity</b> (2022)</br><b>CISCO</b></br>Grameenphone Academy</br>
-                            You can see the certification badge by clicking <a href="https://www.credly.com/badges/af5a491c-fd25-4947-8226-852a50bf8e98/public_url"><i>here</i></a>.
+                        <p><b style="font-size: 22px;">Introduction to Cybersecurity</b>
+                            (2022)</br><b>CISCO</b></br>Grameenphone Academy</br>
+                            You can see the certification badge by clicking <a
+                                href="https://www.credly.com/badges/af5a491c-fd25-4947-8226-852a50bf8e98/public_url"><i>here</i></a>.
                         </p>
                     </li>
                     <li>
-                        <p><b style="font-size: 22px;">Data Science Cohort-3</b> (2023-2024)</br><b>Mastercourse</b></br>Dokkho Career Program, Dhaka</br></p>
+                        <p><b style="font-size: 22px;">Data Science Cohort-3</b>
+                            (2023-2024)</br><b>Mastercourse</b></br>Dokkho Career Program, Dhaka</br></p>
                     </li>
                     <li>
-                        <p><b style="font-size: 22px;">Deutschkurs A1-A2</b> (2023)</br><b>Language Course</b></br>Goethe Institut, Dhaka</br></p>
+                        <p><b style="font-size: 22px;">Deutschkurs A1-A2</b> (2023)</br><b>Language
+                                Course</b></br>Goethe Institut, Dhaka</br></p>
                     </li>
                 </ol>
             </article>
@@ -190,17 +481,24 @@
                             <li>Adeptness in integrating API interfaces within <b>HuggingFace & Git pages</b>.</li>
                             <li>Experienced in conducting web scraping operations employing <b>Selenium</b>.</li>
                             <li>Coupled with fluency in <b>Python</b> programming language.</li>
-                            <li>Comfortable with <b>PyTorch</b> with a readiness to acquire proficiency in <b>TensorFlow</b>.</li>
-                            <li>Proficient utilization of <b>Visual Studio</b>, <b>Jupyter Notebook</b>, <b>Google Colab</b> and <b>Pycharm</b> for development tasks.</li>
-                            <li>Well-versed in <b>GitHub</b>'s functionalities and practices for version control and collaboration in projects.</li>
+                            <li>Comfortable with <b>PyTorch</b> with a readiness to acquire proficiency in
+                                <b>TensorFlow</b>.
+                            </li>
+                            <li>Proficient utilization of <b>Visual Studio</b>, <b>Jupyter Notebook</b>, <b>Google
+                                    Colab</b> and <b>Pycharm</b> for development tasks.</li>
+                            <li>Well-versed in <b>GitHub</b>'s functionalities and practices for version control and
+                                collaboration in projects.</li>
                         </ol>
                     </li>
                     <li>
                         <b style="font-size: 22px;">Networking </b></br>
                         <ol>
-                            <li>Experienced in leveraging <b>Cisco Packet Tracer</b> for network design, simulation, and configuration</li>
-                            <li>Proficient in employing <b>Wireshark</b> for in-depth network protocol analysis and troubleshooting.</li>
-                            <li>Possess a strong command of <b>IP</b> calculation techniques and adeptness in various methods for network segmentation and subdivision.</li>
+                            <li>Experienced in leveraging <b>Cisco Packet Tracer</b> for network design, simulation, and
+                                configuration</li>
+                            <li>Proficient in employing <b>Wireshark</b> for in-depth network protocol analysis and
+                                troubleshooting.</li>
+                            <li>Possess a strong command of <b>IP</b> calculation techniques and adeptness in various
+                                methods for network segmentation and subdivision.</li>
                         </ol>
                     </li>
                     <li>
@@ -208,37 +506,58 @@
                         <ol>
                             <li>Skilled in utilizing <b>Android Studio</b> to develop Android applications.</li>
                             <li>Adept in harnessing the functionalities of <b>Firebase</b>.</li>
-                            <li>Knowledgeable in working with the <b>Laravel</b> framework for web development purposes.</li>
-                            <li>Proficient across various programming languages such as <b>Python</b>, <b>Java</b>, <b>C++</b>, <b>C</b>, and <b>PHP</b></li>
-                            <li>Well-acquainted with front-end technologies including <b>HTML</b>, <b>Bootstrap</b>, <b>CSS</b>, and <b>XML</b> for crafting engaging web and mobile applications.</li>
+                            <li>Knowledgeable in working with the <b>Laravel</b> framework for web development purposes.
+                            </li>
+                            <li>Proficient across various programming languages such as <b>Python</b>, <b>Java</b>,
+                                <b>C++</b>, <b>C</b>, and <b>PHP</b>
+                            </li>
+                            <li>Well-acquainted with front-end technologies including <b>HTML</b>, <b>Bootstrap</b>,
+                                <b>CSS</b>, and <b>XML</b> for crafting engaging web and mobile applications.
+                            </li>
                         </ol>
                     </li>
                     <li>
                         <b style="font-size: 22px;">Other Skills</b></br>
                         <ol>
-                            <li>Experienced in the creation, simplification, and conversion of <b>Automata</b>s and <b>Context-Free Grammar</b>s (<b>CFG</b>s) for computational models.</li>
-                            <li>Proficient in <b>Microsoft Word</b>, <b>Excel</b>, and <b>PowerPoint</b>, as well as adept in utilizing <b>Google Docs</b>, <b>Sheets</b>, and <b>Slides</b> for comprehensive documentation, data analysis, and impactful presentations.</li>                
+                            <li>Experienced in the creation, simplification, and conversion of <b>Automata</b>s and
+                                <b>Context-Free Grammar</b>s (<b>CFG</b>s) for computational models.
+                            </li>
+                            <li>Proficient in <b>Microsoft Word</b>, <b>Excel</b>, and <b>PowerPoint</b>, as well as
+                                adept in utilizing <b>Google Docs</b>, <b>Sheets</b>, and <b>Slides</b> for
+                                comprehensive documentation, data analysis, and impactful presentations.</li>
                         </ol>
                     </li>
                     <li>
                         <b style="font-size: 22px;">Soft Skills</b></br>
                         <ol>
-                            <li><b>Computer Software and Hardware Knowledge</b>, proficient in comprehensive understanding and expertise encompassing a broad spectrum of computer software and hardware components, functionalities, and their interplay within computing systems.</li>
-                            <li><b>Effective Communication</b>, proficient in conveying ideas clearly and articulately, fostering seamless collaboration among teams.</li>
-                            <li><b>Adaptability</b>, skilled in navigating diverse environments, swiftly adjusting strategies to meet evolving project needs.</li>
-                            <li><b>Problem-Solving</b>, Adept at analyzing complex issues, identifying solutions, and implementing effective resolutions.</li>
-                            <li><b>Time Managesment</b>, proficient in prioritizing tasks, optimizing productivity, and meeting deadlines efficiently.</li>
-                            <li><b>Team Player</b>, valued for the ability to collaborate seamlessly within multidisciplinary teams, contributing positively to group dynamics.</li>
-                            <li><b>Leadership</b>, capable of guiding and inspiring others, showcasing leadership qualities to drive projects forward.</li>
-                            <li><b>Attention to Detail</b>, meticulous in ensuring accuracy and precision, maintaining high standards in all tasks undertaken.</li>
-                            <li><b>Critical Thinking</b>, skilled in evaluating situations from multiple perspectives, enabling innovative and strategic decision-making.</li>
-                            <li><b>Resilience</b>, exhibits a resilient attitude when faced with challenges, demonstrating persistence and determination in overcoming obstacles.</li>
-                            <li><b>Empathy</b>, capable of understanding others' perspectives, fostering a supportive and inclusive work environment.</li>
+                            <li><b>Computer Software and Hardware Knowledge</b>, proficient in comprehensive
+                                understanding and expertise encompassing a broad spectrum of computer software and
+                                hardware components, functionalities, and their interplay within computing systems.</li>
+                            <li><b>Effective Communication</b>, proficient in conveying ideas clearly and articulately,
+                                fostering seamless collaboration among teams.</li>
+                            <li><b>Adaptability</b>, skilled in navigating diverse environments, swiftly adjusting
+                                strategies to meet evolving project needs.</li>
+                            <li><b>Problem-Solving</b>, Adept at analyzing complex issues, identifying solutions, and
+                                implementing effective resolutions.</li>
+                            <li><b>Time Managesment</b>, proficient in prioritizing tasks, optimizing productivity, and
+                                meeting deadlines efficiently.</li>
+                            <li><b>Team Player</b>, valued for the ability to collaborate seamlessly within
+                                multidisciplinary teams, contributing positively to group dynamics.</li>
+                            <li><b>Leadership</b>, capable of guiding and inspiring others, showcasing leadership
+                                qualities to drive projects forward.</li>
+                            <li><b>Attention to Detail</b>, meticulous in ensuring accuracy and precision, maintaining
+                                high standards in all tasks undertaken.</li>
+                            <li><b>Critical Thinking</b>, skilled in evaluating situations from multiple perspectives,
+                                enabling innovative and strategic decision-making.</li>
+                            <li><b>Resilience</b>, exhibits a resilient attitude when faced with challenges,
+                                demonstrating persistence and determination in overcoming obstacles.</li>
+                            <li><b>Empathy</b>, capable of understanding others' perspectives, fostering a supportive
+                                and inclusive work environment.</li>
                         </ol>
                     </li>
 
 
-                            
+
                 </ul>
             </article>
 
@@ -247,13 +566,16 @@
                 <h2 class="major">Co-curricular</h2>
                 <ol>
                     <li>
-                        <p><b style="font-size: 26px;">First prize</b> (2022)</br><b>Introduction to Cybersecurity Quiz Competition</b></br>Grameenphone Academy</br></p>
+                        <p><b style="font-size: 26px;">First prize</b> (2022)</br><b>Introduction to Cybersecurity Quiz
+                                Competition</b></br>Grameenphone Academy</br></p>
                     </li>
                     <li>
-                        <p><b style="font-size: 26px;">General Member</b> (2021)</br><b>Human Resources Club</b></br>North South University</br></p>
+                        <p><b style="font-size: 26px;">General Member</b> (2021)</br><b>Human Resources
+                                Club</b></br>North South University</br></p>
                     </li>
                     <li>
-                        <p><b style="font-size: 26px;">Participant</b> (---)</br><b>AI seminars & workshops</b></br>North South University</br></p>
+                        <p><b style="font-size: 26px;">Participant</b> (---)</br><b>AI seminars &
+                                workshops</b></br>North South University</br></p>
                     </li>
                 </ol>
             </article>
